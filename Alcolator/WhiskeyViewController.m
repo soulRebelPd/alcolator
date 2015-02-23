@@ -12,6 +12,21 @@
 @end
 
 @implementation WhiskeyViewController
+    - (void) viewDidLoad {
+        [super viewDidLoad];
+        self.title = NSLocalizedString(@"Whiskey", @"whiskey");
+    }
+
+    - (void)sliderValueDidChange:(UISlider *)sender {
+        NSLog(@"Slider value changed to %f", sender.value);
+        
+        //NOTE: added to satisfy lesson
+        int numberOfBeers = self.beerCountSlider.value;
+        NSString *message = [NSString stringWithFormat:NSLocalizedString(@"%d Shots", nil), numberOfBeers];
+        self.navigationItem.title = message;
+        [self.beerPercentTextField resignFirstResponder];
+    }
+
     - (void)buttonPressed:(UIButton *)sender;
     {
         [self.beerPercentTextField resignFirstResponder];

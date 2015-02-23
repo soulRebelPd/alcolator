@@ -82,9 +82,10 @@
 }
 
 - (void)viewDidLoad {
-    [super viewDidLoad];
     // Calls the superclass's implementation
     [super viewDidLoad];
+    
+    self.title = NSLocalizedString(@"Wine", @"wine");
     
     // Set our primary view's background color to lightGrayColor
     self.view.backgroundColor = [UIColor lightGrayColor];
@@ -141,10 +142,11 @@
     
     //NOTE: added to satisfy lesson
     int numberOfBeers = self.beerCountSlider.value;
-    NSString *message = [NSString stringWithFormat:NSLocalizedString(@"%d Beers", nil), numberOfBeers];
-    self.beersSelected.text = message;
-    
+    NSString *message = [NSString stringWithFormat:NSLocalizedString(@"%d Glasses", nil), numberOfBeers];
+    self.navigationItem.title = message;
     [self.beerPercentTextField resignFirstResponder];
+    
+    //self.beersSelected.text = [NSString stringWithFormat:NSLocalizedString(@"%d Beers", nil), numberOfBeers];
 }
 
 - (void)buttonPressed:(UIButton *)sender {
