@@ -12,6 +12,30 @@
 @end
 
 @implementation WhiskeyViewController
+
+    - (instancetype) init {
+        self = [super init];
+        if (self) {
+            self.title = NSLocalizedString(@"Whiskey", nil);
+        }
+        return self;
+    }
+
+    - (void) viewDidLoad {
+        [super viewDidLoad];
+        self.view.backgroundColor = [UIColor colorWithRed:0.992 green:0.992 blue:0.588 alpha:1]; /*#fdfd96*/
+    }
+
+    - (void)sliderValueDidChange:(UISlider *)sender {
+        NSLog(@"Slider value changed to %f", sender.value);
+        
+        //NOTE: added to satisfy lesson
+        int numberOfBeers = self.beerCountSlider.value;
+        NSString *message = [NSString stringWithFormat:NSLocalizedString(@"%d Shots", nil), numberOfBeers];
+        self.navigationItem.title = message;
+        [self.beerPercentTextField resignFirstResponder];
+    }
+
     - (void)buttonPressed:(UIButton *)sender;
     {
         [self.beerPercentTextField resignFirstResponder];

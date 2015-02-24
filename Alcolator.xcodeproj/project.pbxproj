@@ -225,6 +225,7 @@
 				04ED7A821A97EA4E00D36E0C /* WhiskeyViewController.m in Sources */,
 				04ED7A5E1A9793B000D36E0C /* AppDelegate.m in Sources */,
 				04ED7A5B1A9793B000D36E0C /* main.m in Sources */,
+				04ED7A851A9BC2FA00D36E0C /* MainMenuViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -409,6 +410,7 @@
 				04ED7A7A1A9793B000D36E0C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		04ED7A7B1A9793B000D36E0C /* Build configuration list for PBXNativeTarget "AlcolatorTests" */ = {
 			isa = XCConfigurationList;
@@ -417,6 +419,7 @@
 				04ED7A7D1A9793B000D36E0C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
